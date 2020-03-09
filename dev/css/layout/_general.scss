@@ -1,0 +1,28 @@
+//Couleurs
+    //couleur texte de base
+$color-1: #303030;
+    //couleur texte 2 grey
+$color-2: #818181;
+    //Green de base
+$color-3: #779b2b;
+    //Green light (hover)
+$color-4: #c5d8a7;
+    //Beige
+$color-5: #fcf6ed;
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+#main_nav{
+    height: 100px;
+    background-color: rgba(255,255,255,0.75);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+body{
+    background: greenyellow;
+}
