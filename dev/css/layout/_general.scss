@@ -9,7 +9,15 @@
         $color-4: #c5d8a7;
     //Beige
         $color-5: #fcf6ed;
-
+        
+    //Priority 1
+        $priority_1: red;
+    //Priority 2
+        $priority_2: #FFF58A;
+    //Priority 3
+        $priority_3: #779b2b;
+    //Priority 4
+        $priority_4: white;
 
 html{
     scroll-behavior: smooth;
@@ -52,7 +60,223 @@ input {
 
 .wrapper_body{
     padding-top: 100px;
-    background: greenyellow;
-    background-image: url(../img/);
+    background: url(../img/pleurotes-1.jpg) center/cover no-repeat $color-5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.wrapUser{
+    padding: 75px 75px 50px 75px;
+    margin: 50px 0;
+    border-radius: 50px;
+    width: 60vw;
+    background: rgba(252, 246, 237, 0.699);
+    position: relative;
+    color: $color-1;
 
 }
+
+.wrapUserInfo{
+    margin: 150px 0 50px;
+    p{
+        font-size: 1.2em;
+    }
+}
+
+        .userName{
+            margin: 0;
+            position: absolute;
+            transform: translate(0 , -50%);
+            top: 0;
+            left: 40px;
+            background: $color-1;
+            color: $color-3;
+            padding: 5px 15px;
+            font-size: 3.6em;
+        }
+
+        .userRoleWrap{
+            position: absolute;
+            transform: translate( -50% , -50%);
+            top: 0;
+            right: -30px;
+            overflow: hidden;
+            border-radius: 50%;
+            height: 200px;
+            font-size: 1.2em;
+        }
+        
+        .userPicture{
+            border-radius: 50%;
+            height: 200px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .userRole{
+            text-transform: uppercase;
+            position: absolute;
+            transform: translate( -50% , 0);
+            background: $color-1;
+            color: $color-5;
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            bottom: 0;
+            left: 50%;
+            font-weight: bold;
+            user-select: none;
+        }
+
+        .userLocation{
+            position: relative;
+            &::before{
+                font-family: FontAwesome;
+                content: "\f3c5";
+                left: -30px;
+                position: absolute;
+                display: inline-block;
+                padding-right: 3px;
+            }
+        }
+
+        .userEmail{
+            position: relative;
+            &::before{
+                font-family: FontAwesome;
+                content: "\f0e0";
+                left: -30px;
+                position: absolute;
+                display: inline-block;
+                padding-right: 3px;
+            }
+        }
+
+        
+        .userBirthdate{
+            position: relative;
+            &::before{
+                font-family: FontAwesome;
+                content: "\f1fd";
+                left: -30px;
+                position: absolute;
+                display: inline-block;
+                padding-right: 3px;
+            }
+        }
+
+        .userBio{
+            position: relative;
+            &::before{
+                font-family: FontAwesome;
+                content: "\f004";
+                left: -30px;
+                position: absolute;
+                display: inline-block;
+                padding-right: 3px;
+            }
+        }
+
+        .taskFieldTitle{
+            margin: 0;
+            position: absolute;
+            transform: translate(0 , -50%);
+            top: 0;
+            left: 40px;
+            background: $color-1;
+            color: $color-3;
+            padding: 5px 15px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .task{
+            margin-top: 50px;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 70%;
+                margin: auto;
+                height: 1px;
+                background: $color-3;
+                top: -25px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:nth-of-type(2) {
+                margin-top: 0px;
+            }
+            &:nth-of-type(2)::before {
+
+                display: none;
+            }
+            
+        }
+
+        .taskTitle{
+            position: relative;
+            font-size: 1.8em;
+            width: 90%;
+            a{
+                color: $color-1;
+                font-weight: bold;
+            }
+        }
+
+        .taskDesc{
+            color: $color-2;
+        }
+
+        .taskCreationDate{
+            color: $color-3;
+            font-size: 0.7em;
+            padding: 6px 0;
+        }
+
+        .taskDeadline{
+            padding-top: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $color-5;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .prior1{
+            background: $priority_1;
+            &::before{
+                font-family: FontAwesome;
+                content: "\f071";
+                right: -25px;
+                position: absolute;
+                display: inline-block;
+                padding-left: 3px;
+                color: $priority_1;
+            }
+        }
+        .prior2{
+            background: $priority_2;
+            color: $color-1;
+            &::before{
+                font-family: FontAwesome;
+                content: "\f12a";
+                right: -18px;
+                position: absolute;
+                display: inline-block;
+            }
+        }
+        .prior3{
+            background: $priority_3;
+        }
+        .prior4{
+            background: $priority_4;
+            color: $color-1;
+        }
