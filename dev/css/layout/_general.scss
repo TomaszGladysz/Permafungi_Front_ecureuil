@@ -66,6 +66,7 @@ input {
     align-items: center;
     flex-flow: column;
     justify-content: center;
+    
 }
 
 .wrapUser{
@@ -86,7 +87,7 @@ input {
     }
 }
 
-        .userName{
+        .fieldTitle{
             margin: 0;
             position: absolute;
             transform: translate(0 , -50%);
@@ -96,6 +97,7 @@ input {
             color: $color-3;
             padding: 5px 15px;
             font-size: 3.6em;
+            font-weight: bold;
         }
 
         .userRoleWrap{
