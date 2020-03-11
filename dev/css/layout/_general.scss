@@ -24,31 +24,37 @@ html, body{
     font-family: 'Source Sans Pro', sans-serif;
     height: 100%;
 }
-
+.logo-responsive {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 5px;
+    left: 5px;
+    background-image: url("https://www.permafungi.be/wp-content/uploads/2018/10/logo-png-80x80.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 10;
+    @media screen and(min-width:1200px) {
+        display: none;
+    }
+}
 section.login {
+    position: relative;
     width: 100vw;
     height: 100vh;
     font-size: 1.15rem;
     background-image: url("https://www.permafungi.be/wp-content/uploads/2018/10/hero-pleurotes.jpg");
-    background-position: center;
+    background-position: right;
     background-size: cover;
-}
-
-.connexion {
-    width: 35%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 4px solid #779b2b;
-    border-radius: 15px;
-    > * {
-        margin: 0 25px;
+    @media screen and(max-width:1200px) {
+        flex-direction: column;
+        background-position: center;
+
+
     }
 }
 
@@ -57,10 +63,131 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    label {
+        color: $color-1;
+        font-weight: 700;
+    }
+    input:focus,
+    textarea:focus {
+        background-color: $color-4;
+
+    }
+    .envoyer {
+        margin: 15px 0;
+    }
 }
 
+.connexion,
+.inscription {
+    width: 35%;
+    @media screen and(max-width:1200px) {
+        width: 85%;
+        padding: 15px;
+
+    }
+    position: relative;
+    padding: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    // border: 4px solid $color-3;
+    border-radius: 25px;
+    margin: 0 25px;
+    img {width: 20%;}
+    > * {
+        margin: 0 25px;
+    }
+    h2 {
+        color: $color-1;
+        margin-top: -15px;
+        padding: 0;
+    }
+}
+
+.image-logo {
+    @media screen and(max-width:1200px) {
+        display: none;
+    }
+}
+
+
+
+.image-logo,
+.logo-add-task
+ {
+    width: 80px;
+    height: 80px;
+    background-image: url("https://www.permafungi.be/wp-content/uploads/2018/10/logo-png-80x80.png");
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.form-inscription {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 1fr, 1fr, 1fr;
+    @media screen and(max-width:1200px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 15%;
+    }
+
+        > .partie-sup {
+        margin: 0 auto;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    > .col-gauche {
+        grid-column: 1;
+        grid-row: 2 / 3;
+        margin-right: 5px;
+    }
+    > .col-droite {
+        margin-bottom: 25px;
+        grid-column: 2;
+        grid-row: 2 / 3;
+        margin-left: 5px;
+
+
+    }
+        h2 {
+        color: $color-1;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    > .partie-inf {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+
+
+}
+
+
+
 input {
+    width: 100%;
     margin-bottom: 15px;
+}
+.password-text,
+.password-text-inscription {
+    @include boutton (2px, #779b2b, white, 5px);
+    margin: 0 0 12px 5px;
+    width: 32px;
+    cursor: pointer;
+}
+.envoyer {
+    // padding: 10px;
+    // background-color: #779b2b;
+    // color: white;
+    // border-radius: 15px;
+    @include boutton (10px, #779b2b, white, 15px)
 }
 
 .wrapper_body {
