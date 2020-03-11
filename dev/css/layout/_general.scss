@@ -19,10 +19,10 @@
     //Priority 4
         $priority_4: white;
 
-html{
+html, body{
     scroll-behavior: smooth;
     font-family: 'Source Sans Pro', sans-serif;
-
+    height: 100%;
 }
 
 section.login {
@@ -60,17 +60,28 @@ input {
 
 .wrapper_body{
     padding-top: 100px;
-    background: url(../img/pleurotes-1.jpg) center/cover no-repeat $color-5;
     min-height: 100vh;
     display: flex;
     align-items: center;
     flex-flow: column;
     justify-content: center;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
     @media screen and (max-width:1700px) {
         padding-top: 50px;
-        
     }
-    
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        background: url(../img/pleurotes-1.jpg) center/cover no-repeat $color-5;
+        filter: blur(20px);
+        transform: scale(1.1);
+    }
 }
 
 .wrapUser{
@@ -84,6 +95,7 @@ input {
     @media screen and (max-width:1700px) {
         width: 90vw;
         padding: 80px 25px 40px;
+        margin: 50px 0 20px;
         
     }
 }
@@ -127,6 +139,7 @@ input {
             overflow: hidden;
             border-radius: 50%;
             height: 200px;
+            width: 200px;
             font-size: 1.2em;
             @media screen and (max-width:1700px) {
                 top: -135px;
@@ -217,6 +230,13 @@ input {
             padding: 5px 15px;
             font-size: 2.5em;
             font-weight: bold;
+            @media screen and (max-width:1700px) {
+                font-size: 2em;
+                left: 50%;
+                width: 90%;
+                transform: translate(-50% , -50% );
+                text-align: center;
+            }
         }
 
         .task{
@@ -278,8 +298,30 @@ input {
 
         .taskCreationDate{
             color: $color-3;
-            font-size: 0.7em;
+            font-size: 1em;
             padding: 6px 0;
+        }
+
+        .taskCreator{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top: 0px;
+            font-size: 1.3em;
+
+            a{
+                text-decoration: none;
+                color: $color-1;
+                border-bottom: 2px solid $color-1;
+                font-weight: bold;
+                transition: 0.3s all ease-in-out;
+
+
+                &:hover{
+                    color: $color-3;
+                    border-bottom: 2px solid #779b2b;
+                }
+            }
         }
 
         .taskDeadline{
