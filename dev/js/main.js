@@ -19,55 +19,61 @@ sousMenu.addEventListener('click',function (){
 });
 
 
+// // TESTETSTETSETESTETS
+// // TESTETSTETSETESTETS
+// // TESTETSTETSETESTETS
+
+// let targetURL = "URL API"; 
+// let xhr = new XMLHttpRequest();
+
+// xhr.addEventListener('readystatechange', function (event){
+//     if (xhr.readyState == 4 && xhr.status == 200) {
+//         let json =JSON.parse(xhr.responseText);
 
 
-// TESTETSTETSETESTETS
-// TESTETSTETSETESTETS
-// TESTETSTETSETESTETS
-
-for (var i = 1 ; i<10 ; i++ ){
-
-
-let targetURL = "URL API"; 
-let xhr = new XMLHttpRequest();
-
-xhr.addEventListener('readystatechange', function (event){
-    if (xhr.readyState == 4 && xhr.status == 200) {
-        let json =JSON.parse(xhr.responseText);
-        // console.log(json.results[0].poster_path);
-
-
-            let task = document.querySelector('.wrapper');
-
-            let title = document.querySelector('h1');
-            let rating = document.querySelector('h2');
-            let poster = document.querySelector('img');
-            let imageWrap =document.querySelector('div');
-            let description = document.querySelector('p');
-            let filmWrap = document.querySelector('div');
-
-            filmWrap.className= 'wrapperMovie';
-            imageWrap.className= 'wrapperImage';
+//         //USER INFO
+//             let userName = document.querySelector('.userName');
+//             let userRole = document.querySelector('.userRole');
+//             // let userPicture = document.querySelector('.userPicture');
+//             let userLocation = document.querySelector('.userLocation');
+//             let userEmail = document.querySelector('.userEmail');
+//             let userBirthdate = document.querySelector('.userBirthdate');
+//             // let userBio = document.querySelector('.userBio');
             
-            wrapper.appendChild(filmWrap);
-            filmWrap.appendChild(title);
-            filmWrap.appendChild(imageWrap);
-            imageWrap.appendChild(poster);
-            imageWrap.appendChild(rating);
-            imageWrap.appendChild(description);
-            
-        }
-         
+//         //TASK INFO
+//             let taskTitle = document.querySelector('.taskTitle');
+//             let taskDesc = document.querySelector('.taskDesc');
+//             let taskCreationDate = document.querySelector('.taskCreationDate');
+//             let taskDeadline = document.querySelector('.taskDeadline');
+//             let taskCreator = document.querySelector('.taskCreator');
+//             // let taskImage = document.querySelector('.taskImage');
+                   
+// ///TEXT_CONTENT
 
-    }
-})
-    xhr.open('GET', targetURL, true);
-    xhr.send();
-}
-  
-// TESTETSTETSETESTETS
-// TESTETSTETSETESTETS
-// TESTETSTETSETESTETS
+//         //USER
+//            userName.textContent = dataJSON.FirstName + " " + dataJSON.lastName;
+//            userRole.textContent = dataJSON.Role;
+//             //    userPicture.textContent = dataJSON.NOM_JSON;
+//            userLocation.textContent = dataJSON.WorkPlace;
+//            userEmail.textContent = dataJSON.Email;
+//            userBirthdate.textContent = dataJSON.BirthDate;
+//             //    userBio.textContent = dataJSON.NOM_JSON;
+           
+//         //TASK
+//             taskTitle.textContent = dataJSON.Title;
+//             taskDesc.textContent = dataJSON.Desctiption;
+//             taskCreationDate.textContent = dataJSON.CreationDate;
+//             taskDeadline.textContent = dataJSON.Deadline;
+//             taskCreator.textContent = dataJSON.User;
+//             // taskImage.textContent = dataJSON.NOM_JSON;
+          
+//     } else {
+//         console.log("hahaha.non")
+//     }})
+
+// // TESTETSTETSETESTETS
+// // TESTETSTETSETESTETS
+// // TESTETSTETSETESTETS
 
 
 

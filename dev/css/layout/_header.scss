@@ -31,10 +31,12 @@
 
         &:first-child{
             border: none;
+            margin-bottom: -17px;
         }
         &:first-child:hover{
             border: none;
             transform: rotate(540deg);
+            margin-bottom: 17px;
         }
         
         &:hover{
@@ -45,6 +47,7 @@
     }
     img{
         width: 90px;
+        clip-path: inset(0 0 21px 0);
         @media screen and (max-width:1200px) {
             width: 150px;
         }
