@@ -1,0 +1,6 @@
+@mixin boutton ($espacement-interne,$couleur-font,$couleur-texte,$arrondi-bordure) {
+    padding: $espacement-interne;
+    background-color: $couleur-font;
+    color: $couleur-texte;
+    border-radius: $arrondi-bordure;
+}
