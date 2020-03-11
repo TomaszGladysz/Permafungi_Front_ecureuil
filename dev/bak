@@ -1,0 +1,203 @@
+//Couleurs
+    //couleur texte de base
+        $color-1: #303030;
+    //couleur texte 2 grey
+        $color-2: #818181;
+    //Green de base
+        $color-3: #779b2b;
+    //Green light (hover)
+        $color-4: #c5d8a7;
+    //Beige
+        $color-5: #fcf6ed;
+
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+.logo-responsive {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 5px;
+    left: 5px;
+    background-image: url("https://www.permafungi.be/wp-content/uploads/2018/10/logo-png-80x80.png");
+    background-position: center;
+    background-size: cover;
+    @media screen and(min-width:1200px) {
+        display: none;
+    }
+}
+section.login {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.15rem;
+    background-image: url("https://www.permafungi.be/wp-content/uploads/2018/10/hero-pleurotes.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and(max-width:1200px) {
+        flex-direction: column;
+
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .envoyer {
+        margin: 15px 0;
+    }
+}
+
+.connexion,
+.inscription {
+    width: 35%;
+    @media screen and(max-width:1200px) {
+        width: 75%;
+
+    }
+    position: relative;
+    padding: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    // border: 4px solid $color-3;
+    border-radius: 15px;
+    margin: 0 25px;
+    img {width: 20%;}
+    > * {
+        margin: 0 25px;
+    }
+    h2 {
+        color: $color-1;
+        margin-top: -15px;
+        padding: 0;
+    }
+}
+
+
+.image-logo {
+    width: 80px;
+    height: 80px;
+    background-image: url("https://www.permafungi.be/wp-content/uploads/2018/10/logo-png-80x80.png");
+    background-position: center;
+    background-size: cover;
+    @media screen and(max-width:1200px) {
+        display: none;
+    }
+}
+
+
+
+.form-inscription {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 1fr, 1fr, 1fr;
+    > .partie-sup {
+        margin: 0 auto;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    > .col-gauche {
+        grid-column: 1;
+        grid-row: 2 / 3;
+        margin-right: 5px;
+    }
+    > .col-droite {
+        margin-bottom: 25px;
+        grid-column: 2;
+        grid-row: 2 / 3;
+        margin-left: 5px;
+
+
+    }
+        h2 {
+        color: $color-1;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    > .partie-inf {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+
+
+}
+
+
+
+input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.password-text {
+    @include boutton (2px, #779b2b, white, 5px);
+    margin: 0 0 12px 5px;
+    width: 32px;
+}
+.envoyer {
+    // padding: 10px;
+    // background-color: #779b2b;
+    // color: white;
+    // border-radius: 15px;
+    @include boutton (10px, #779b2b, white, 15px)
+}
+
+.wrapper_body {
+    padding-top: 100px;
+    background: greenyellow;
+    background-image: url(../img/);
+}
+
+.pass {
+    display: flex;
+    align-items: center;
+    > i {
+        margin-left: 25px; 
+    }
+}
+.apercu-photo {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+// .photo-profil {
+//     position: relative;
+//     margin: 25px auto;
+//     width: 125px;
+//     height: 125px;
+//     border: 2px solid $color-1;
+//     border-radius: 15px;
+//     i.fa-user {
+//         margin: 6px 0 0 12px;
+//         font-size: 600%;
+//         color: $color-3;
+//     }
+//     i.fa-plus-square {
+//         position: absolute;
+//         bottom: -10px;
+//         right: -10px;
+//         font-size: 1.75rem;
+//         color: $color-3;
+//         background-color: #ffffff;
+
+
+//     }
+// }

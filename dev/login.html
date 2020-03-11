@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
         <link href="css/style.min.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
@@ -10,19 +11,60 @@
     </head>
     <body>
         <section class="login">
+            
+            <div class="logo-responsive"></div>
             <div class="connexion">
-                <img src="https://www.permafungi.be/wp-content/uploads/2018/10/logo-png-80x80.png" alt="Login | PermaFungi">
-                <div class="pass">
-                    <form action="_POST">
-                        <label for="identifiant">Votre identifiant</label>
-                        <input type="text" placeholder="Votre identifiant, ici" name="identifiant">
-                        <label for="lpassword">Entrez votre mot de passe</label>
-                        <input type="password" name="lpassword">
-                        <button>Se connecter</button>
-                    </form>
-                </div>
+                
+                <div class="image-logo"></div>
+                <!-- <img src="https://www.permafungi.be/wp-content/uploads/2018/10/logo-png-80x80.png" alt="Login | PermaFungi"> -->
+                <form method="_POST" action="">
+                    <h2>Connectez-vous</h2>
+                    <label for="identifiant">Votre identifiant</label>
+                    <input type="text" placeholder="Identifiant" name="identifiant">
+                    <label for="lpassword">Entrez votre mot de passe</label>
+                    <div class="pass">
+                        <input class="tip-password" type="password" name="lpassword" placeholder="Password"><div class="password-text"><i class="fas fa-eye"></i></div>
+                    </div>
+                    <input class="envoyer" name="submit" type="submit" value="Se connecter"></input>
+                </form>
+                
             </div>
+            <div class="inscription">
+                <form class="form-inscription" method="_POST" action="">
+                    <div class="partie-sup">
+                        <h2>Vous n'êtes pas encore enregistré ?</h2>
+                    </div>
+                    <div class="col-gauche">
+                        <label for="name">Votre nom</label>
+                        <input type="text" placeholder="Votre nom" name="name">
+                        <label for="surname">Votre prénom</label>
+                        <input type="text" placeholder="Votre prénbom" name="surname">
+                        <label for="role">Sélectionner votre statut</label>
+                        <select class="definition-role" name="role" id="role">
+                            <option value="admin">Administrateur</option>
+                            <option value="finance">Plan. financier</option>
+                            <option value="audit">Audit financier</option>
+                        </select>
+                    </div>
+                    <div class="col-droite">
+                        <label for="identifiant-inscription">Votre identifiant</label>
+                        <input type="text" placeholder="Identifiant" name="identifiant-inscription">
+                        <label for="password-inscription">Définissez votre mot de passe</label>
+                        <div class="pass">
+                            <input class="tip-password-inscription" type="password" name="password-inscription" placeholder="Password"><div class="password-text-inscription"><i class="fas fa-eye"></i></div>
+                        </div>
+    
+                        <label class="label-upload-photo-profil" for="photo-profil">Uploader une image</label>
+                        <input class="upload-photo-profil" type="file" name="photo-profil">
+                        <div class="apercu-photo">
+                        </div>
+                        </div>
+                        <div class="partie-inf">
+                            <input class="envoyer" name="submit" type="submit" value="S'enregistrer"></input>
+                        </div>
 
+                </form>
+            </div>
         </section>
     <script src="js/main.min.js"></script>
     </body>

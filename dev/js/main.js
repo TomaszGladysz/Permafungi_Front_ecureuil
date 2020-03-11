@@ -19,6 +19,8 @@ sousMenu.addEventListener('click',function (){
 });
 
 
+
+
 // TESTETSTETSETESTETS
 // TESTETSTETSETESTETS
 // TESTETSTETSETESTETS
@@ -66,3 +68,50 @@ xhr.addEventListener('readystatechange', function (event){
 // TESTETSTETSETESTETS
 // TESTETSTETSETESTETS
 // TESTETSTETSETESTETS
+
+
+
+
+//////CHRISTOPHE JS/////////
+
+var PsswrdText = document.querySelector('input.tip-password');
+var switchPssrdText = document.querySelector('div.password-text');
+var indicPassText = document.querySelector('i');
+
+switchPssrdText.addEventListener('click', function () {
+    if (PsswrdText.getAttribute('Type') == 'text') {
+        PsswrdText.setAttribute('type', 'password');
+    }
+    else {
+    PsswrdText.setAttribute('type', 'text');}
+
+    if (indicPassText.getAttribute('class') == 'fas fa-eye') {
+        indicPassText.setAttribute('class', 'fas fa-eye-slash')
+    }
+    else {
+        indicPassText.setAttribute('class', 'fas fa-eye')
+    }
+})
+// Champ password => Texte -> Connexion
+// Champ password => Texte -> Inscription
+
+
+var PsswrdTextInscription = document.querySelector('input.tip-password-inscription');
+var switchPssrdTextInscription = document.querySelector('div.password-text-inscription');
+var indicPassTextInscription = document.querySelector('div.password-text-inscription > i');
+
+switchPssrdTextInscription.addEventListener('click', function () {
+    console.log("OK")
+    if (PsswrdTextInscription.getAttribute('Type') == 'text') {
+        PsswrdTextInscription.setAttribute('type', 'password');
+    }
+    else {
+        PsswrdTextInscription.setAttribute('type', 'text');}
+
+    if (indicPassTextInscription.getAttribute('class') == 'fas fa-eye') {
+        indicPassTextInscription.setAttribute('class', 'fas fa-eye-slash')
+    }
+    else {
+        indicPassTextInscription.setAttribute('class', 'fas fa-eye')
+    }
+})
