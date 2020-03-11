@@ -9,6 +9,13 @@
     justify-content: space-evenly;
     align-items: center;
     z-index: 100;
+    transition: 0.5s all ease-in-out;
+    @media screen and (max-width:1700px) {
+        top: -200vh;
+        height: 100vh;
+        flex-flow: column;
+        background-color: rgba(255,255,255,0.95);
+    }
 
     a{
         text-decoration: none;
@@ -35,4 +42,84 @@
     img{
         width: 90px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+// burger Menu toggle
+
+#toggleMenu{
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    @media screen and (max-width:1200px) {
+        background: $color-4;
+        position: fixed;
+        z-index: 1500;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+}
+
+.active{
+    border-color: $color-2;
+}
+
+.visible{
+    top: 0 !important;
+}
+
+#toggleMenu div{
+    @media screen and (max-width:1200px) {
+        width: 25px;
+        height: 2px;
+        background: $color-3;
+        border-radius: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s  all ease-in-out;
+    }
+    
+}
+
+#toggleMenu div:last-child{
+    @media screen and (max-width:1200px) {
+    top: 30%;    
+    }
+}
+
+#toggleMenu div:first-child{
+    @media screen and (max-width:1200px) {
+    top: 70%;   
+    }
+}
+
+.active div:nth-of-type(2){
+    left: 60px !important;    
+}
+
+.active div{
+    top: 50% !important;
+}
+
+.active div:last-child{
+    transform: translate(-50%, -50%) rotate(45deg) !important;
+    transition: 0.3s top ease-in-out, 0.3s transform ease-in-out 0.6s;
+}
+
+.active div:first-child{
+    transform: translate(-50%, -50%) rotate(-45deg) !important;
+    transition: 0.3s top ease-in-out, 0.3s transform ease-in-out 0.6s;
 }
