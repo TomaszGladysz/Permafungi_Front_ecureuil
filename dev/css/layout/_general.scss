@@ -55,6 +55,10 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    label {
+        color: $color-1;
+        font-weight: 700;
+    }
     input:focus,
     textarea:focus {
         background-color: $color-4;
@@ -70,6 +74,7 @@ form {
     width: 35%;
     @media screen and(max-width:1200px) {
         width: 85%;
+        padding: 15px;
 
     }
     position: relative;
@@ -167,6 +172,7 @@ input {
     @include boutton (2px, #779b2b, white, 5px);
     margin: 0 0 12px 5px;
     width: 32px;
+    cursor: pointer;
 }
 .envoyer {
     // padding: 10px;
