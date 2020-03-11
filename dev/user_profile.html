@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="css/style.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bd0bbb5512.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
         <title>User Profile | PermaFungi</title>
@@ -12,30 +13,175 @@
     </head>
     <body>
 
-        <nav id="main_nav">
-            <img src="../img/logo-png-177.png" alt="Logo">
-            <a href="tasks_page.html">Tasks</a>
+        <div id="toggleMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="main_nav" class="menu">
+            <a href="https://www.permafungi.be"><img src="../img/logo-png-177.png" alt="Logo"></a>
+            <a href="tasks_list.html">Tasks</a>
             <a href="tasks_archive.html">Archives</a>
             <a href="login.html">Login</a>
-            <a href="#">Recherche?</a>
         </nav>
-
-
-      
+     
     
         <div class="wrapper_body">
 
-            <h1>User Profile</h1>
-            <p>user Name</p>
-            <p>user Tasks created</p>
-            <p>user Tasks finished</p>
-            <p>user role</p>
-            <p>user Email</p>
-            <p>user Age</p>
+            <div class="wrapUserInfo wrapUser">
+                <h1 class="userName fieldTitle">Keith Chapman</h1>
+                    <div class="userRoleWrap">
+                        <img src="../img/user.jpg" alt="User profile picture" class="userPicture">
+                        <p class="userRole">Admin</p>
+                    </div>    
+
+                <p class="userLocation">Bruxelles</p>
+                <p class="userEmail">keith.chapman@example.com</p>
+                <p class="userBirthdate">2/1/1986</p>
+                <p class="userBio">I love working hard and drink coffe at my desk even if i spill a little bit on my keybard</p>
+                
+            </div>
+            
+<!-- Taches ACTIVES de l'utilisateur -->
+
+            <div class="activeTasks wrapUser">
+                <div class="taskFieldTitle">
+                    Tâches actives
+                </div>
+
+<!--  TEMPLATE D'UNE TASK
+
+                <div class="task">
+                    <div class="taskTitle">
+                        <a href="#">TITRE</a>
+                    </div>
+                    <div class="taskCreationDate">
+                        09-03-20 DATE
+                    </div>
+                    <div class="taskDesc">
+                        DESCRIPTION DE TACHE
+                    </div>
+                    <div class="taskDeadline prior1">
+                        DATE DE DEADLINE
+                    </div>
+                </div>
+
+-->
+
+                <div class="task">
+                    <div class="taskTitle">
+                        <a href="task_page.html">Réparer la machine à Café!</a> 
+                    </div>
+                    <div class="taskCreationDate">
+                        10-03-20
+                    </div>
+                    <div class="taskDesc">
+                        Ca fait deux semaines que la machine à café est en panne il faut absolument faire quelque-chose
+                    </div>
+                    <div class="taskDeadline prior4">
+                        12-03-20
+                    </div>                
+                </div>
+
+                <div class="task">
+                    <div class="taskTitle">
+                        <a href="task_page.html">Le robilet bouché</a>
+                    </div>
+                    <div class="taskCreationDate">
+                        09-03-20
+                    </div>
+                    <div class="taskDesc">
+                        Le robilet de la toilette des hommes du 4eme étage est encore bouché! Il fait la réparer.
+                    </div>
+                    <div class="taskDeadline prior1">
+                        A$AP
+                    </div>
+                </div>
+
+                <div class="task">
+                    <div class="taskTitle">
+                        <a href="task_page.html">Acheter des bières pour le drink du vendredi soir</a>
+                    </div>
+                    <div class="taskCreationDate">
+                        08-03-20
+                    </div>
+                    <div class="taskDesc">
+                        Il faut pas oublier d'acheter les bières, ouliez pas de garder le ticket de caisse pour se faire rembourser par la comptable!
+                    </div>
+                    <div class="taskDeadline prior2">
+                        12-03-20
+                    </div>                
+                </div>
+
+            </div>
+
+<!-- Taches CREEE (ARCHIVE) par l'utilisateur -->
+
+            
+            <div class="createdTasks wrapUser">
+                <div class="taskFieldTitle">
+                    Tâches créées
+                </div>
+                <div class="task">
+                    <div class="taskTitle">
+                        <a href="task_page.html">Acheter café</a>
+                    </div>
+                    <div class="taskCreationDate">
+                        09-03-20
+                    </div>
+                    <div class="taskDesc">
+                        Il Faut acheter du café!!
+                    </div>
+                </div>
+
+                <div class="task">
+                    <div class="taskTitle">
+                        <a href="task_page.html">Commande des sancwitch pour midi</a>
+                    </div>
+                    <div class="taskCreationDate">
+                        09-03-20
+                    </div>
+                    <div class="taskDesc">
+                        Une personne doit récuper la commande des sandwitch pout le bureau
+                    </div>
+
+                </div>
+            </div>
+            
+
+
+<!-- Taches QUE L'USER A REALISE (ARCHIVE) -->
+
+            <div class="FinishedTasks wrapUser">
+                <div class="taskFieldTitle">
+                    Tâches réalisées
+                </div>
+                <div class="task">
+                    <div class="taskTitle">
+                        <a href="task_page.html">Acheter des bières pour le drink</a>
+                    </div>
+                    <div class="taskCreationDate">
+                        09-03-20
+                    </div>
+                    <div class="taskDesc">
+                        Il faut des bières pour le drink
+                    </div>
+
+                <div class="task">
+                    <div class="taskTitle">
+                        <a href="task_page.html">Déboucher les toilettes</a>
+                    </div>
+                    <div class="taskCreationDate">
+                        09-03-20
+                    </div>
+                    <div class="taskDesc">
+                        Il faut déboucher les toilettes du 5eme étage
+                    </div>
+            </div>
+            
 
         </div>
-
-
 
 
     <script src="js/main.min.js"></script>

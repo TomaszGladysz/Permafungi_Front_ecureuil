@@ -1,21 +1,19 @@
-
-// <i class="fas fa-eye-slash"></i>
-
-
+var monBouton = document.querySelector('#toggleMenu');
+var monMenuHamburber = document.querySelector('#main_nav');
 
 
-// Chap password => Texte
+monBouton.addEventListener('click',function (){
+    monMenuHamburber.classList.toggle('visible');
+});
 
+monBouton.addEventListener('click',function (){
+  monBouton.classList.toggle('active');
+});
 
-var PsswrdText = document.querySelector('input.tip-password');
-var switchPssrdText = document.querySelector('div.password-text');
+sousMenu.addEventListener('click',function (){
+  monBouton.classList.toggle('active');
+});
 
-switchPssrdText.addEventListener('click', function () {
-    if (PsswrdText.getAttribute('Type') == 'text') {
-        PsswrdText.setAttribute('type', 'password');
-    }
-    else {
-    PsswrdText.setAttribute('type', 'text');}
-})
-
-
+sousMenu.addEventListener('click',function (){
+    monMenuHamburber.classList.toggle('visible');
+});

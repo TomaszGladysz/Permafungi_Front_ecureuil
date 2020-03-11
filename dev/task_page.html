@@ -5,12 +5,104 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="css/style.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bd0bbb5512.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
         <title>Task ID## | PermaFungi</title>
 
     </head>
     <body>
+        <div id="toggleMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="main_nav">
+            <a href="https://www.permafungi.be"><img src="../img/logo-png-177.png" alt="Logo"></a>
+            <a href="tasks_list.html">Tasks</a>
+            <a href="tasks_archive.html">Archives</a>
+            <a href="login.html">Login</a>
+           
+        </nav>
+
+
+        <div class="wrapper_body">
+
+            <div class="wrapUser">
+
+                <div class="fieldTitle">
+                    Réparer la machine à Café! 
+                </div>
+
+                <div class="task">
+                    <div class="taskCreationDate">
+                        09-03-20
+                    </div>
+                    <div class="taskImage">
+                        <img src="../img/imagetask.jpg" alt="">
+                    </div>
+                    <div class="taskDesc">
+                        Ca fait deux semaines que la machine à café est en panne il faut absolument faire quelque-chose c'est insupportable de travailler comme ca avec un service it débile,des vrai bras cassé wallah j'en reviens pas frère.                    </div>
+                    <div class="taskDeadline prior3">
+                        12-03-20
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wrapUser">
+                <div class="fieldTitle">
+                    Commentaires
+                </div>
+
+                <div class="task comment">
+                    <div class="taskTitle commentName">
+                        <a href="user_profile.html">Michel Drucker</a>
+                    </div>
+                    <div class="taskCreationDate commentDate">
+                        09-03-20
+                    </div>
+                    <div class="taskDesc commentContent">
+                        Je m'en occupe après mon émission.         
+                    </div>
+                </div>
+
+                <div class="task comment">
+                    <div class="taskTitle commentName">
+                        <a href="user_profile.html">Jean-Luc Reichmann</a>
+                    </div>
+                    <div class="taskCreationDate commentDate">
+                        09-03-20
+                    </div>
+                    <div class="taskDesc commentContent">
+                        Donne lui 12 coups et il vas se réparer tout seul.    
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="wrapUser">
+                <div class="fieldTitle">
+                    Ajoutez un commentaire
+                </div>
+
+                <form action="">
+                    <label for="fname">Votre commentaire</label>
+                    <input type="text" name="commentaire" placeholder="votre commentaire..">
+
+                    <input type="submit" value="Submit">
+
+                </form>
+
+            </div>
+
+
+            
+        </div>
+
+
+
 
     <script src="js/main.min.js"></script>
     </body>
